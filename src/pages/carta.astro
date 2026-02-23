@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AccordionItem from "../components/AccordionItem.tsx";
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.astro';
+
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="El Rectangle - Carta" description="Restaurante de cocina mediterránea con un estilo inquieto, cambiante y arriesgado. Nuestra propuesta se basa en ingredientes de temporada y una selección de vinos artesanales. La experiencia en la barra te permite entender el restaurante desde dentro, mientras que nuestra carta ofrece platos sin normas ni recetas sagradas. Déjate llevar por nuestras sugerencias y disfruta de una experiencia culinaria única.">
+	<Header client:load />
+
+	<section class="relative w-full flex justify-center h-[80dvh] min-h-96 items-center text-white-cream">
+
+		<!-- container -->
+		<div class="max-w-360 flex w-full h-full justify-center items-center px-[0.875rem] py-[5rem]">
+			<div class="z-20 flex flex-col items-center justify-center gap-[4rem]">
+				<h2 class="font-Antro text-6xl">Carta</h2>
+				<p class="text-center">
+				Te invitamos a recorrer <strong>nuestro mundo de sabores.</strong> Elige entre nuestras tapas y vinos.
+				</p>
+
+				<div class=" flex gap-4 items-center relative font-bold flex-wrap justify-center font-Mono font-normal uppercase">
+					<a href="/" class="bg-orange text-white-cream items-center justify-center px-[2rem] py-[1rem] max-w-[250px] hover:bg-orange-800 transition-colors duration-250">
+					Tapas
+					</a>
+					<a href="/" class="bg-white content-stretch flex items-center justify-center px-[2rem] py-[1rem] hover:bg-gray-200 transition-colors duration-250 text-wine">
+					Vinos
+					</a>
+				</div>
+			</div>
+
+			<div class="absolute inset-0 z-10 bg-center bg-cover bg-[url('img/bg-home/BG_Hero.png')]"/>
+
+			<!-- Overlay oscuro -->
+			<div class="absolute inset-0 z-10 bg-black/50" />
+
+		</div>
+	</section>
+
+	<!-- Tapas -->
+	<section class="w-full flex items-center justify-center py-[5rem]">
+		<div class="w-full max-w-[1440px] px-[0.875rem] gap-[1.5rem] flex flex-col">
+			<div class="w-full flex flex-col gap-[1.5rem] border-t-2 border-b-2 border-wine py-[3rem] md:px-[4rem] ">
+				<h2 class="font-Antro text-6xl">Tapas</h2>
+				<p><strong>Algunos platos vuelven, otros desaparecen.</strong><br><br>
+				No todo está siempre, y eso también forma parte de la experiencia.
+				</p>
+			</div>
+	
+			<div class="max-w-[1440px] w-full flex flex-col md:px-[4rem]">
+				<AccordionItem  
+					client:load
+					name="Nuestra Gilda lud"
+					price="3,5 €"
+					image="/img/products/croqueta_lund.png" 
+				/>
+	
+				<AccordionItem  
+					client:load
+					name="La Croqueta Lund"
+					price="3,5 €"
+					image="/img/products/croqueta.png" 
+				/>
+	
+				<AccordionItem  
+					client:load
+					name="Bravas Martí"
+					price="3,5 €"
+					image="/img/products/bravas_marti.png" 
+				/>
+	
+				<AccordionItem  
+					client:load
+					name="La Russa"
+					price="3,5 €"
+					image="/img/products/la_russa.png" 
+				/>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Vinos -->
+	<section class="w-full flex items-center justify-center py-[5rem]">
+		<div class="w-full max-w-[1440px] px-[0.875rem] gap-[1.5rem] flex flex-col">
+			<div class="w-full flex flex-col gap-[1.5rem] border-t-2 border-b-2 border-wine py-[3rem] md:px-[4rem] ">
+				<h2 class="font-Antro text-6xl">Vinos</h2>
+				<p><strong>Las tapas se entienden mejor con una copa delante.</strong><br><br>
+				Nuestra selección de vinos está pensada para acompañarte.
+				</p>
+			</div>
+	
+			<div class="max-w-[1440px] w-full flex flex-col md:px-[4rem]">
+				<div class="flex flex-col items-start gap-4">
+					<span class="text-xl font-Mono uppercase font-medium">
+						ESPUMOSOS
+					</span>
+					<AccordionItem  
+						client:load
+						name="5455 / Seybel, Aubergne"
+						price="40 €"
+						image="/img/products/croqueta_lund.png" 
+					/>
+		
+					<AccordionItem  
+						client:load
+						name="Segunyola / Xarel-lo, Penedès"
+						price="29 €"
+						image="/img/products/croqueta.png" 
+					/>
+				</div>
+	
+				<AccordionItem  
+					client:load
+					name="Bravas Martí"
+					price="3,5 €"
+					image="/img/products/bravas_marti.png" 
+				/>
+	
+				<AccordionItem  
+					client:load
+					name="La Russa"
+					price="3,5 €"
+					image="/img/products/la_russa.png" 
+				/>
+			</div>
+		</div>
+	</section>
+
+	<section class="w-full flex items-center justify-center py-[5rem] relative overflow-hidden text-wine">
+		<div class="max-w-[1440px] w-full px-[0.875rem] flex flex-col gap-[1.5rem] relative z-10 md:px-[4rem] items-center text-center">
+			<h2 class="font-Mono text-4xl ">¿AÚN NO TE HAS DECIDIDO?</h2>
+			<p>
+			Nosotros te proponemos algo que encaje contigo y con el momento.
+			</p>
+			<a href="/" class="flex items-center gap-0">
+				<div class="bg-orange text-white px-8 py-3 uppercase w-fit font-Mono font-medium">
+				Déjate llevar
+				</div>
+				<svg class="bg-orange rounded-full" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="40" height="40" rx="20" fill="transparent"/>
+					<path d="M25.834 20L20.834 25M25.834 20L20.834 15M25.834 20L14.1673 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</a>
+		</div>
+	</section>
+
+	<Footer />
+</Layout>

@@ -1,11 +1,107 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.astro';
+import Slider from '../components/Slider.astro';
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="El Rectangle" description="Restaurante de cocina mediterránea con un estilo inquieto, cambiante y arriesgado. Nuestra propuesta se basa en ingredientes de temporada y una selección de vinos artesanales. La experiencia en la barra te permite entender el restaurante desde dentro, mientras que nuestra carta ofrece platos sin normas ni recetas sagradas. Déjate llevar por nuestras sugerencias y disfruta de una experiencia culinaria única.">
+	<Header client:load />
+
+	<HeroSection />
+
+	<section class="w-full flex items-center justify-center pt-[5rem]">
+		<div class="max-w-[1440px] w-full px-[0.875rem] flex flex-col gap-[1.5rem] md:px-[4rem]">
+			<div class="flex flex-col">
+				<h2 class="font-Antro text-6xl">Nuestra</h2>
+				<h2 class="font-Antro text-6xl text-right mr-20">Propuesta</h2>
+			</div>
+			<p><strong>Pocas cosas. Bien pensadas.</strong><br><br>
+
+			El mercado y los ingredientes de temporada nos llevan a un estilo Mediterráneo, pero no nos atan. Tenemos una carta inquieta, cambiante, arriesgada... aquí no hay normas, ni recetas sagradas. Nos gusta jugar libre, pero siempre con sentido.
+			</p>
+		</div>
+	</section>
+
+	<Slider />
+
+	<section class="w-full flex items-center justify-center py-[5rem]">
+		<div class="max-w-[1440px] w-full px-[0.875rem] flex flex-col gap-[1.5rem] md:px-[4rem]">
+			<h2 class="font-Antro text-6xl text-center">La Barra</h2>
+			<p><strong>No es solo sentarse. Es ver los platos salir. </strong><br><br>
+
+			Escuchar una recomendación al vuelo. Probar algo que no sabías que te apetecía. Aquí la experiencia es más directa, más viva. Más cercana.
+			<br><br>
+
+			La barra te permite entender el restaurante desde dentro: cómo se cocina y cómo se adapta la comida a cada momento. Es una forma más flexible de comer, donde no hace falta tenerlo todo claro desde el principio.
+			</p>
+			<div class="flex flex-col md:flex-row gap-4 w-full">
+				<img class="md:w-3/5 object-cover" src="img/barra.png" alt="imagen de la barra">
+				<img class="md:w-2/5 object-cover" src="img/barra_2.png" alt="imagen de la barra">
+			</div>
+
+		</div>
+	</section>
+
+	<section class="w-full flex items-center justify-center py-[5rem] relative overflow-hidden text-white">
+		<img src="img/cta_bg.png" alt="imagen de fondo" class="absolute inset-0 w-full h-full object-cover object-center z-0" />
+		<div class="max-w-[1440px] w-full px-[0.875rem] flex flex-col gap-[1.5rem] relative z-10 md:px-[4rem]">
+			<h2 class="font-Mono text-4xl">¿AÚN NO TE HAS DECIDIDO?</h2>
+			<p><strong>Dinos qué te gusta. </strong><br>
+			Nosotros nos encargamos de sugerirte algo que tenga sentido para ti y para hoy.
+			</p>
+			<a href="/" class="flex items-center gap-0">
+				<div class="bg-white text-black px-8 py-3 uppercase w-fit font-Mono font-medium">
+				Déjate llevar
+				</div>
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+				<rect width="40" height="40" rx="20" fill="white"/>
+				<path d="M25.834 20L20.834 25M25.834 20L20.834 15M25.834 20L14.1673 20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</a>
+		</div>
+	</section>
+
+	<section class="w-full flex items-center justify-center py-[5rem]">
+		<div class="max-w-[1440px] w-full px-[0.875rem] flex flex-col gap-[1.5rem] md:px-[4rem]">
+			<h2 class="font-Antro text-6xl text-center">Vinos</h2>
+			<p><strong>Selección sin imposiciones, pero con criterio.</strong><br><br>
+
+			Trabajamos con vinos artesanales. Propuestas con carácter e identidad, listos para explotar tus sentidos.
+			</p>
+
+			<a href="/" class="font-Mono underline">Déjate llevar</a>
+
+			<div>
+				<span>5455 / Seybel, Aubergne</span>
+				<span>40 €</span>
+			</div>
+
+			<div>
+				<span>Segunyola / Xarel-lo, Penedès</span>
+				<span>29 €</span>
+			</div>
+
+			<div>
+				<span>5455 / Seybel, Aubergne</span>
+				<span>40 €</span>
+			</div>
+
+			<div>
+				<span>5455 / Seybel, Aubergne</span>
+				<span>40 €</span>
+			</div>
+			
+			<a href="/" class="font-Mono flex items-center gap-0 bg-orange text-white-cream px-8 py-3 uppercase w-fit">
+				Ver más
+			</a>
+		</div>
+	</section>
+
+	<Footer />
 </Layout>

@@ -1,0 +1,144 @@
+---
+// Slider.astro
+---
+
+<!-- Tu HTML del slider aquí -->
+<section class="w-full flex flex-col items-center justify-center py-[5rem] px-[0.875rem]">
+  <div class="font-Mono max-w-[1440px] w-full px-[0.875rem] py-[5rem] bg-white border-3 border-wine flex flex-col gap-4 md:px-[4rem]">
+    <div class="flex flex-col gap-4 md:flex-row justify-between">
+      <div class="text-3xl uppercase flex flex-wrap">
+        <h2 class="border-3 border-wine px-8 py-3 w-fit -mr-0.5 -mb-0.5 md:-mb-0">Especiales</h2>
+        <h2 class="border-3 border-wine px-8 py-3 w-fit">del dia</h2>
+      </div>
+      <a href="/" class="flex items-center gap-0">
+        <div class="bg-black text-white-cream px-8 py-3 uppercase w-fit">
+          Ver todo el menú
+        </div>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="20" fill="black"/>
+          <path d="M25.834 20L20.834 25M25.834 20L20.834 15M25.834 20L14.1673 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+    <div class="slider-main_component" loop-mode="true" slider-duration="300">
+        <div class="swiper md:flex md:flex-col md:items-center">
+
+          <!-- Start de Slides -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex flex-col w-full bg-[#FAFAFA] px-8 py-10 border-2 border-wine gap-8">
+              <img class="w-full border-2 border-wine" src="img/products/croqueta_lund.png" alt="Imagen de producto">
+              <div class="flex flex-col gap-3 border-b-2 border-wine pb-8">
+                <h3 class="font-medium uppercase text-[1.5rem]">La Croqueta lund</h3>
+                <span class="font-DMSans font-normal text-[1.225rem]">3,5 €</span>
+              </div>
+            </div>
+  
+            <div class="swiper-slide flex flex-col w-full bg-[#FAFAFA] px-8 py-10 border-2 border-wine gap-8">
+              <img class="w-full border-2 border-wine" src="img/products/bravas_marti.png" alt="Imagen de producto">
+              <div class="flex flex-col gap-3 border-b-2 border-wine pb-8">
+                <h3 class="font-medium uppercase text-[1.5rem]">Bravas Martí</h3>
+                <span class="font-DMSans font-normal text-[1.225rem]">3,5 €</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide flex flex-col w-full bg-[#FAFAFA] px-8 py-10 border-2 border-wine gap-8">
+                <img class="w-full border-2 border-wine" src="img/products/la_russa.png" alt="Imagen de producto">
+                <div class="flex flex-col gap-3 border-b-2 border-wine pb-8">
+                  <h3 class="font-medium uppercase text-[1.5rem]">La Russa</h3>
+                  <span class="font-DMSans font-normal text-[1.225rem]">7 €</span>
+                </div>
+            </div>
+
+            <div class="swiper-slide flex flex-col w-full bg-[#FAFAFA] px-8 py-10 border-2 border-wine gap-8">
+                <img class="w-full border-2 border-wine" src="img/products/albondiga.png" alt="Imagen de producto">
+                <div class="flex flex-col gap-3 border-b-2 border-wine pb-8">
+                  <h3 class="font-medium uppercase text-[1.5rem]">ALBÓNDIGA, RUSTIT, HOISIN</h3>
+                  <span class="font-DMSans font-normal text-[1.225rem]">3,5 €</span>
+                </div>
+            </div>
+          </div>
+
+
+          <!-- End de Slides -->
+
+          <!-- Bullets -->
+          <div class="flex items-center gap-4 mt-4 px-2 md:min-w-xl">
+            <button class="swiper-prev">
+              <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
+                <path d="M10 20L0 10L10 0L11.775 1.775L3.55 10L11.775 18.225L10 20Z" fill="#1F1F1F"/>
+              </svg>
+            </button>
+
+            <div class="swiper-bullet-wrapper flex items-center gap-2 flex-1 w-full"></div>
+
+            <button class="swiper-next">
+              <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
+                <path d="M1.77539 20L11.7754 10L1.77539 0L0.000390053 1.775L8.22539 10L0.000390053 18.225L1.77539 20Z" fill="#1F1F1F"/>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- CDN de Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- jQuery si lo necesitas -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+
+  document.querySelectorAll(".slider-main_component").forEach((el) => {
+    const loopMode = el.getAttribute("loop-mode") === "true";
+    const sliderDuration = el.getAttribute("slider-duration") 
+      ? +el.getAttribute("slider-duration") 
+      : 300;
+
+    new Swiper(el.querySelector(".swiper"), {
+      speed: sliderDuration,
+      loop: loopMode,
+      // ... el resto de tu config igual
+      breakpoints: {
+      // mobile landscape
+        480: {
+          slidesPerView: 1,
+          spaceBetween: "4%"
+        },
+        // tablet
+        768: {
+          slidesPerView: 2,
+          spaceBetween: "4%"
+        },
+        // desktop
+        992: {
+          slidesPerView: '3.5',
+          spaceBetween: "1.8%"
+        }
+      },
+      pagination: {
+        el: el.querySelector(".swiper-bullet-wrapper"),
+        bulletActiveClass: "is-active",
+        bulletClass: "swiper-bullet",
+        bulletElement: "button",
+        clickable: true
+      },
+      // pagination: {
+      //   el: el.querySelector(".swiper-bullet-wrapper"),
+      //   // ...
+      // },
+      navigation: {
+        nextEl: el.querySelector(".swiper-next"),
+        prevEl: el.querySelector(".swiper-prev"),
+      },
+      // scrollbar: {
+      //   el: el.querySelector(".swiper-drag-wrapper"),
+      //   // ...
+      // }
+    });
+  });
+</script>

@@ -1,0 +1,62 @@
+---
+const images = [
+  "/img/bg-home/BG_Hero.png",
+  "/img/bg-home/BG_Hero-1.png",
+  "/img/bg-home/BG_Hero-2.png",
+];
+
+const n = images.length;
+const dur = n * 2; // duración total en segundos (2s por foto)
+
+---
+<style set:html={`
+  @keyframes hero-show {
+    0%, ${((1 / n) * 100).toFixed(2)}%  { opacity: 1; }
+    ${((1 / n) * 100 + 0.01).toFixed(2)}%, 100% { opacity: 0; }
+  }
+
+  .slide-0 {
+    opacity: 1;
+    animation: hero-show ${dur}s 0s infinite;
+  }
+
+  ${images.map((_, i) => i === 0 ? '' : `
+    .slide-${i} {
+      opacity: 0;
+      animation: hero-show ${dur}s ${i * 2}s infinite;
+    }
+  `).join('')}
+`}></style>
+
+
+<section class="relative w-full flex justify-center h-[80dvh] min-h-96 items-center">
+
+  <!-- container -->
+  <div class="max-w-360 flex w-full h-full justify-center items-center px-[0.875rem] py-[5rem]">
+    <div class="z-20 flex flex-col items-center justify-center gap-[4rem]">
+      <img src="img/white-logo.png" alt="Logo del Rectangle">
+
+      <div class=" flex gap-4 items-center relative font-bold flex-wrap justify-center font-Mono font-normal">
+        <a href="/" class="bg-orange text-white-cream items-center justify-center px-[2rem] py-[1rem] max-w-[250px] hover:bg-orange-800 transition-colors duration-250">
+          HAZ TU RESERVA
+        </a>
+        <a href="/carta" class="bg-white content-stretch flex items-center justify-center px-[2rem] py-[1rem] hover:bg-gray-200 transition-colors duration-250">
+          NUESTRA CARTA
+        </a>
+      </div>
+    </div>
+
+      <!-- Fondos apilados -->
+    {images.map((src, i) => (
+      <div
+        class={`slide-${i} absolute inset-0 z-10 bg-center bg-cover opacity-0`}
+        style={`background-image: url(${src})`}
+      />
+    ))}
+
+    <!-- Overlay oscuro -->
+    <div class="absolute inset-0 z-10 bg-black/50" />
+
+
+  </div>
+</section>

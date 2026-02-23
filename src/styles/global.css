@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+body, html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    text-wrap: pretty;
+    background-color: var(--color-white-cream);
+    color: var(--color-wine);
+    font-size: 1rem;
+    line-height: 1.2em;
+}
+
+@font-face {
+  font-family: DM Mono;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("../assets/fonts/dm-mono-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: DM Mono;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url("../assets/fonts/dm-mono-latin-300-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Antro Vectra;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url("../assets/fonts/Antro_Vectra_Bolder.woff2") format("woff2");
+}
+
+
+@theme {
+  --color-orange: #FF6200;
+  --color-orange-800: #E05600;
+  --color-wine: #270717;
+  --color-white-cream: #FFF9F1;
+  --font-Mono: "DM Mono";
+  --font-DMSans: "DM Sans";
+  --font-Antro: "Antro Vectra";
+}
+
+
+/* Slider Flechas */
+.swiper-next,
+.swiper-prev {
+  @apply text-gray-800 text-xl font-light cursor-pointer select-none;
+}
+
+.swiper-next.is-disabled,
+.swiper-prev.is-disabled {
+  @apply opacity-30;
+}
+
+/* Wrapper de bullets y scrollbar juntos */
+.swiper-controls {
+  @apply flex items-center gap-3;
+}
+
+/* Scrollbar — la pill naranja alargada */
+.swiper-drag-wrapper {
+  @apply h-3 bg-transparent rounded-full flex-1;
+}
+
+.swiper-drag {
+  @apply h-3 bg-orange-500 rounded-full;
+}
+
+.swiper-bullet {
+  @apply w-4 h-4 rounded-full bg-orange-200 cursor-pointer transition-all duration-300;
+}
+
+.swiper-bullet.is-active {
+  @apply bg-orange-500 rounded-full;
+  width: 100%; /* se expande como pill */
+}

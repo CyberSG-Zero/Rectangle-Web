@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AccordionItem from "../components/AccordionItem.tsx";
-import Header from '../components/Header.jsx';
+import Header from '../components/Header';
 import Footer from '../components/Footer.astro';
 
 
@@ -23,10 +23,10 @@ import Footer from '../components/Footer.astro';
 				</p>
 
 				<div class=" flex gap-4 items-center relative font-bold flex-wrap justify-center font-Mono font-normal uppercase">
-					<a href="/" class="bg-orange text-white-cream items-center justify-center px-[2rem] py-[1rem] max-w-[250px] hover:bg-orange-800 transition-colors duration-250">
+					<a href="#tapas" class="bg-orange text-white-cream items-center justify-center px-[2rem] py-[1rem] max-w-[250px] hover:bg-orange-800 transition-colors duration-250">
 					Tapas
 					</a>
-					<a href="/" class="bg-white content-stretch flex items-center justify-center px-[2rem] py-[1rem] hover:bg-gray-200 transition-colors duration-250 text-wine">
+					<a href="#vinos" class="bg-white content-stretch flex items-center justify-center px-[2rem] py-[1rem] hover:bg-gray-200 transition-colors duration-250 text-wine">
 					Vinos
 					</a>
 				</div>
@@ -41,8 +41,25 @@ import Footer from '../components/Footer.astro';
 		</div>
 	</section>
 
+	<section class="flex flex-col pt-12 w-full flex-nowrap">
+		<div class="infinite-scroll">
+			<div class="skill-img font-Mono text-nowrap">
+				<span>NOVEDADES HOY: Higo, Yogurt, Fruto Secos.</span>
+				<span>NOVEDADES HOY: Higo, Yogurt, Fruto Secos.</span>
+				<span>NOVEDADES HOY: Higo, Yogurt, Fruto Secos.</span>
+				<span>NOVEDADES HOY: Higo, Yogurt, Fruto Secos.</span>
+			</div>
+			<div class="skill-img font-Mono text-nowrap">
+				<span>NOVEDADES HOY: Higo, Yogurt, Fruto Secos.</span>
+				<span>NOVEDADES HOY: Higo, Yogurt, Fruto Secos.</span>
+				<span>NOVEDADES HOY: Higo, Yogurt, Fruto Secos.</span>
+				<span>NOVEDADES HOY: Higo, Yogurt, Fruto Secos.</span>
+			</div>
+		</div>
+	</section>
+
 	<!-- Tapas -->
-	<section class="w-full flex items-center justify-center py-[5rem]">
+	<section class="w-full flex items-center justify-center py-[5rem]" id="tapas">
 		<div class="w-full max-w-[1440px] px-[0.875rem] gap-[1.5rem] flex flex-col">
 			<div class="w-full flex flex-col gap-[1.5rem] border-t-2 border-b-2 border-wine py-[3rem] md:px-[4rem] ">
 				<h2 class="font-Antro text-6xl">Tapas</h2>
@@ -85,7 +102,7 @@ import Footer from '../components/Footer.astro';
 
 
 	<!-- Vinos -->
-	<section class="w-full flex items-center justify-center py-[5rem]">
+	<section class="w-full flex items-center justify-center py-[5rem]" id="vinos">
 		<div class="w-full max-w-[1440px] px-[0.875rem] gap-[1.5rem] flex flex-col">
 			<div class="w-full flex flex-col gap-[1.5rem] border-t-2 border-b-2 border-wine py-[3rem] md:px-[4rem] ">
 				<h2 class="font-Antro text-6xl">Vinos</h2>

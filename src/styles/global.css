@@ -10,6 +10,7 @@ body, html {
     color: var(--color-wine);
     font-size: 1rem;
     line-height: 1.2em;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -81,3 +82,83 @@ body, html {
   @apply bg-orange-500 rounded-full;
   width: 100%; /* se expande como pill */
 }
+
+.infinite-scroll {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  gap: 1rem;
+  /* margin-inline: auto; */
+  /* margin-top: 2rem; */
+  position: relative;
+  height: 5em;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent, 
+    var(--bg-color) 20%, 
+    var(--bg-color) 80%, 
+    transparent
+  );
+}
+@keyframes scrollleft {
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+/* @keyframes scrollright {
+    to {
+        right: -200px;
+    }
+} */
+
+.skill-img {
+  /* text-wrap: nowrap; */
+  display: flex;
+  gap: 1rem;
+  animation-name: scrollleft;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  text-transform: uppercase;
+  color: var(--color-orange);
+  /* animation-delay: -15s; */
+}
+
+/* .item1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+.item2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+/* .item9 {
+    animation-delay: calc(30s / 8 * (8 - 9) * -9);
+} */

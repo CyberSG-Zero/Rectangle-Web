@@ -92,6 +92,7 @@
 
 <script>
   import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+  document.addEventListener('astro:page-load', () => {
 
   document.querySelectorAll(".slider-main_component").forEach((el) => {
     const loopMode = el.getAttribute("loop-mode") === "true";
@@ -140,5 +141,7 @@
       //   // ...
       // }
     });
+  });
+   // Tu código de inicialización de Swiper aquí
   });
 </script>

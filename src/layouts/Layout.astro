@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Header from '../components/Header';
+import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 const { title, description } = Astro.props
 ---
@@ -18,6 +20,10 @@ const { title, description } = Astro.props
 		<ViewTransitions />
 	</head>
 	<body>
-		<slot />
+		<Header client:load transition:persist />
+		<main>
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>

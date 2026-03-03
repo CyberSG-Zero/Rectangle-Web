@@ -1,8 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection.astro';
-import Header from '../components/Header';
-import Footer from '../components/Footer.astro';
 import Slider from '../components/Slider.astro';
 
 
@@ -11,7 +9,6 @@ import Slider from '../components/Slider.astro';
 ---
 
 <Layout title="El Rectangle" description="Restaurante de cocina mediterránea con un estilo inquieto, cambiante y arriesgado. Nuestra propuesta se basa en ingredientes de temporada y una selección de vinos artesanales. La experiencia en la barra te permite entender el restaurante desde dentro, mientras que nuestra carta ofrece platos sin normas ni recetas sagradas. Déjate llevar por nuestras sugerencias y disfruta de una experiencia culinaria única.">
-	<Header client:load />
 
 	<HeroSection />
 
@@ -28,7 +25,7 @@ import Slider from '../components/Slider.astro';
 		</div>
 	</section>
 
-	<Slider />
+	<Slider client:load transition:persist />
 
 	<section class="w-full flex items-center justify-center py-[5rem]">
 		<div class="max-w-[1440px] w-full px-[0.875rem] flex flex-col gap-[1.5rem] md:px-[4rem]">
@@ -75,7 +72,7 @@ import Slider from '../components/Slider.astro';
 			Trabajamos con vinos artesanales. Propuestas con carácter e identidad, listos para explotar tus sentidos.
 			</p>
 
-			<a href="/" class="font-Mono underline">Déjate llevar</a>
+			<a href="/descubrir" class="font-Mono underline">Déjate llevar</a>
 
 			<div>
 				<span>5455 / Seybel, Aubergne</span>
@@ -103,5 +100,4 @@ import Slider from '../components/Slider.astro';
 		</div>
 	</section>
 
-	<Footer />
 </Layout>

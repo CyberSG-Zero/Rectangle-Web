@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 body, html {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'DM Sans', sans-serif;
-    text-wrap: pretty;
-    background-color: var(--color-white-cream);
-    color: var(--color-wine);
-    font-size: 1rem;
-    line-height: 1.2em;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  text-wrap: pretty;
+  background-color: var(--color-white-cream);
+  color: var(--color-wine);
+  font-size: 1rem;
+  line-height: 1.2em;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -35,6 +35,14 @@ body, html {
   font-display: swap;
   font-weight: 300;
   src: url("../assets/fonts/Antro_Vectra_Bolder.woff2") format("woff2");
+}
+
+@font-face{
+  font-family: DM Sans;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url("../assets/fonts/DMSans-VariableFont.woff2") format("woff2");
 }
 
 
@@ -163,3 +171,28 @@ body, html {
 /* .item9 {
     animation-delay: calc(30s / 8 * (8 - 9) * -9);
 } */
+
+@media (min-width: 768px) {
+  .item{
+    width: 100%;
+  }
+  
+  .item .item-img {
+    /* width: auto;
+    height: 100%;
+    max-height: 150px;  */
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+  }
+  
+  .item:hover {
+  
+    & .item-img{
+      width: auto;
+      max-width: 250px;
+      height: 100%;
+      max-height: 350px; 
+    }
+  }
+
+}

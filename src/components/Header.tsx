@@ -26,13 +26,14 @@ export default function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
+  // const descriptionColor = scrolled ? "text-wine" : "text-white";
   const textColor = scrolled ? "text-gray-900" : "text-white";
   const borderColor = scrolled ? "border-wine" : "border-white-cream";
 
   return (
     <>
       <header
-        className={`m-5 fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${borderColor} border-2 md:max-w-[1440px]: ${
+        className={`m-5 font-Mono font-medium fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${borderColor} border-2 md:max-w-[1440px]: ${
           scrolled ? "bg-white border-b border-gray-200" : "bg-transparent"
         }`}
       >
@@ -41,15 +42,15 @@ export default function Header() {
           {/* Logo */}
           <a href="/" className={`flex items-center px-5 py-4 border-r-2 ${borderColor} shrink-0`}>
             <img
-              src={scrolled ? "/img/dark-logo.png" : "/img/white-logo.png"}
+              src={scrolled ? "/img/dark-logo.avif" : "/img/white-logo.avif"}
               alt="Rectangle"
               className="h-8"
             />
           </a>
 
           {/* Tagline — solo desktop */}
-          <div className={`hidden md:flex items-center px-6 border-r border-white-cream flex-1`}>
-            <span className={`text-sm ${textColor} opacity-80`}>
+          <div className={`hidden md:flex items-center px-6 flex-1`}>
+            <span className={`text-sm ${textColor}`}>
               Tapas, platilos, vino & cosas chulas
             </span>
           </div>
@@ -58,16 +59,18 @@ export default function Header() {
           <div className="flex-1 md:hidden" />
 
           {/* RESERVAR — desktop */}
-          <a
-            href="/reserva"
-            className={`hidden md:flex items-center px-6 font-bold text-sm border-r border-l ${borderColor} transition-colors ${
-              scrolled
-                ? "bg-[#3d0a1a] text-white hover:bg-[#2a0712]"
-                : "bg-white text-gray-900 hover:bg-gray-100"
-            }`}
-          >
-            RESERVAR
-          </a>
+          <div className={`px-2 py-2 border-r-2 ${borderColor}`}>
+            <a
+              href="/reserva"
+              className={`hidden h-full md:flex items-center px-6 text-sm transition-colors ${
+                scrolled
+                  ? "bg-[#3d0a1a] text-white hover:bg-[#2a0712]"
+                  : "bg-white text-gray-900 hover:bg-gray-200"
+              }`}
+            >
+              RESERVAR
+            </a>
+          </div>
 
           {/* Nav links — solo desktop */}
           <nav className={`hidden md:flex items-stretch`}>
@@ -75,7 +78,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`flex items-center px-5 text-sm font-bold tracking-wider ${textColor} transition-colors border-r ${borderColor} hover:opacity-60`}
+                className={`flex items-center px-5 text-sm tracking-wider ${textColor} transition-all duration-250 border-r ${borderColor} hover:opacity-60`}
               >
                 {link.label}
               </a>
@@ -83,7 +86,7 @@ export default function Header() {
           </nav>
 
           {/* Selector idioma — desktop */}
-          <div className={`hidden md:flex items-center px-5 gap-1 text-sm font-bold border-2 border-white-cream`}>
+          <div className={`hidden md:flex items-center px-5 gap-1 text-sm ${borderColor}`}>
             {LANGS.map((l, i) => (
               <span key={l} className="flex items-center gap-1">
                 <button
@@ -92,8 +95,8 @@ export default function Header() {
                     lang === l
                       ? textColor
                       : scrolled
-                        ? "text-gray-400 hover:text-gray-700"
-                        : "text-white/40 hover:text-white/80"
+                        ? "text-gray-400 hover:text-gray-700 underline"
+                        : "text-white/40 hover:text-white/80 hover:underline no-underline"
                   }`}
                 >
                   {l}

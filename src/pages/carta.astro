@@ -67,34 +67,119 @@ import Footer from '../components/Footer.astro';
 				</p>
 			</div>
 	
-			<div class="max-w-[1440px] w-full flex flex-col md:px-[4rem]">
-				<AccordionItem  
-					client:load
-					name="Nuestra Gilda lud"
-					price="3,5 €"
-					image="/img/products/croqueta_lund.png" 
-				/>
-	
-				<AccordionItem  
-					client:load
-					name="La Croqueta Lund"
-					price="3,5 €"
-					image="/img/products/croqueta.png" 
-				/>
-	
-				<AccordionItem  
-					client:load
-					name="Bravas Martí"
-					price="3,5 €"
-					image="/img/products/bravas_marti.png" 
-				/>
-	
-				<AccordionItem  
-					client:load
-					name="La Russa"
-					price="3,5 €"
-					image="/img/products/la_russa.png" 
-				/>
+			<div class="max-w-[1440px] w-full flex flex-col md:px-[4rem] md:flex-row md:justify-between md:gap-12">
+				<div class="flex flex-col gap-4 md:w-full">
+					<AccordionItem  
+						client:load
+						name="Nuestra Gilda lud"
+						price="3,5 €"
+						image="/img/products/croqueta_lund.png" 
+					/>
+		
+					<AccordionItem  
+						client:load
+						name="La Croqueta Lund"
+						price="3,5 €"
+						image="/img/products/croqueta.png" 
+					/>
+		
+					<AccordionItem  
+						client:load
+						name="Bravas Martí"
+						price="7 €"
+						image="/img/products/bravas_marti.png" 
+					/>
+		
+					<AccordionItem  
+						client:load
+						name="La Russa"
+						price="7 €"
+						image="/img/products/la_russa.png" 
+					/>
+					<AccordionItem  
+						client:load
+						name="Atun, Col, Mojo Rojo"
+						price="14 €"
+						image="/img/products/la_russa.png" 
+					/>
+					<AccordionItem  
+						client:load
+						name="Ratatouille, Demi Vegetal, Salvia"
+						price="10 €"
+						image="/img/products/la_russa.png" 
+					/>
+					<AccordionItem  
+						client:load
+						name="Berenjena, Miso, Tomate Seco"
+						price="12 €"
+						image="/img/products/la_russa.png" 
+					/>
+					<AccordionItem  
+						client:load
+						name="Higo, Yogurt, Frutos Secos"
+						price="10 €"
+						image="/img/products/la_russa.png" 
+					/>
+					<AccordionItem  
+						client:load
+						name="Sardina ahumada, Ricotta, Cebollino"
+						price="10 €"
+						image="/img/products/la_russa.png" 
+					/>
+				</div>
+				<div class="flex flex-col gap-4 md:w-full">
+					<AccordionItem  
+						client:load
+						name="Albóndiga, Rustit, Hoisin"
+						price="14 €"
+						image="/img/products/croqueta_lund.png" 
+					/>
+		
+					<AccordionItem  
+						client:load
+						name="Celery, Pate, Cereza"
+						price="10 €"
+						image="/img/products/croqueta.png" 
+					/>
+		
+					<AccordionItem  
+						client:load
+						name="Maitake, Puerro, limón"
+						price="14 €"
+						image="/img/products/bravas_marti.png" 
+					/>
+		
+					<AccordionItem  
+						client:load
+						name="Caballa, Beurre Blanc, Tirabeque"
+						price="14 €"
+						image="/img/products/la_russa.png" 
+					/>
+					<AccordionItem  
+						client:load
+						name="Solomillo, Demi Glace, Yema de Huevo"
+						price="18 €"
+						image="/img/products/la_russa.png" 
+					/>
+					<AccordionItem  
+						client:load
+						name="Calamar, Suquet, Lima"
+						price="18 €"
+						image="/img/products/la_russa.png" 
+					/>
+					<AccordionItem  
+						client:load
+						name="Arroz crujiente, Vainilla"
+						price="7 €"
+						image="/img/products/la_russa.png" 
+					/>
+					<AccordionItem  
+						client:load
+						name="Mango, Coco, Celery"
+						price="7 €"
+						image="/img/products/la_russa.png" 
+					/>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -110,39 +195,76 @@ import Footer from '../components/Footer.astro';
 				</p>
 			</div>
 	
-			<div class="max-w-[1440px] w-full flex flex-col md:px-[4rem]">
-				<div class="flex flex-col items-start gap-4">
-					<span class="text-xl font-Mono uppercase font-medium">
-						ESPUMOSOS
-					</span>
-					<AccordionItem  
-						client:load
-						name="5455 / Seybel, Aubergne"
-						price="40 €"
-						image="/img/products/croqueta_lund.png" 
-					/>
-		
-					<AccordionItem  
-						client:load
-						name="Segunyola / Xarel-lo, Penedès"
-						price="29 €"
-						image="/img/products/croqueta.png" 
-					/>
+			<div class="max-w-[1440px] w-full flex flex-col md:flex-row md:px-[4rem] gap-12">
+				<div class="flex flex-col w-full gap-4">
+					<div class="flex flex-col items-start gap-4">
+						<span class="text-xl font-Mono uppercase font-bold">
+							ESPUMOSOS
+						</span>
+						<AccordionItem  
+							client:load
+							name="5455 / Seybel, Aubergne"
+							price="40 €"
+							image="/img/products/croqueta_lund.png" 
+						/>
+			
+						<AccordionItem  
+							client:load
+							name="Segunyola / Xarel-lo, Penedès"
+							price="29 €"
+							image="/img/products/croqueta.png" 
+						/>
+						<AccordionItem  
+							client:load
+							name="Mas Lasta / Petnat, Larzac "
+							price="36 €"
+							image="/img/products/croqueta.png" 
+						/>
+					</div>
+	
+					<div class="flex flex-col items-start gap-4">
+						<span class="text-xl font-Mono uppercase font-bold">
+							ORANGES
+						</span>
+						<AccordionItem  
+							client:load
+							name="Punk Lady / Parellada Rosa, Penedès"
+							price="29 €"
+							image="/img/products/croqueta_lund.png" 
+						/>
+			
+						<AccordionItem  
+							client:load
+							name="Jaumet / Varias, Mallorca"
+							price="37 €"
+							image="/img/products/croqueta.png" 
+						/>
+					</div>
+	
+					<div class="flex flex-col items-start gap-4">
+						<span class="text-xl font-Mono uppercase font-bold">
+							ROSADOS
+						</span>
+						<AccordionItem  
+							client:load
+							name="Patxanga / Trepat, Conca del Barberà"
+							price="28 €"
+							image="/img/products/croqueta_lund.png" 
+						/>
+			
+						<AccordionItem  
+							client:load
+							name="Arrossa / Garnacha, Navarra"
+							price="36 €"
+							image="/img/products/croqueta.png" 
+						/>
+					</div>
 				</div>
-	
-				<AccordionItem  
-					client:load
-					name="Bravas Martí"
-					price="3,5 €"
-					image="/img/products/bravas_marti.png" 
-				/>
-	
-				<AccordionItem  
-					client:load
-					name="La Russa"
-					price="3,5 €"
-					image="/img/products/la_russa.png" 
-				/>
+
+				<div class="w-full relative">
+					<img class="relative z-20 w-full" src="/img/products/Vino1.png" alt="imagen de vinos">
+					<img class="absolute -top-10 md:-top-30 right-0 z-10 max-w-70 md:max-w-105" src="/img/products/Vino2.png" alt="imagen de vinos">
+				</div>
 			</div>
 		</div>
 	</section>

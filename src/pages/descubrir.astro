@@ -1,11 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout-quiz.astro';
 import MenuQuiz from "../components/MenuQuiz";
-import Header from '../components/Header';
 ---
 
 <Layout title="El Rectangle - Descubrir" description="Prueba nuestro recomendador especializado para descubrir tu plato o vino ideal. Responde a unas preguntas sobre tus gustos y preferencias, y te sugeriremos opciones que se adapten a ti. Es la forma más fácil y divertida de explorar nuestra carta y encontrar algo que realmente te apetezca. ¡Déjate sorprender por nuestras recomendaciones personalizadas!">
-	<Header client:load />
 
-	<MenuQuiz client:load/>
+	<MenuQuiz client:load backgrounds={{
+		intro:   "img/quiz/bg_1.png",
+		dietary: "img/quiz/bg_1.png",
+		comer:   "img/quiz/bg_2.png",
+		beber:   "img/quiz/bg_3.png",
+		ambos:   "img/quiz/bg_4.png",
+		result:   "img/quiz/bg_4.png",
+	}} />
 </Layout>

@@ -14,7 +14,7 @@ export default function AccordionItem({ name, price, image, alt }: Props) {
   return (
     <div className="item border-b-2 border-wine py-4 w-full text-wine transition-all duration-250">
       <div
-        className="flex flex-col items-start justify-between cursor-pointer gap-2 md:flex-row"
+        className="flex flex-col items-start justify-between cursor-pointer md:cursor-auto gap-2 md:flex-row"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="md:flex md:flex-row">

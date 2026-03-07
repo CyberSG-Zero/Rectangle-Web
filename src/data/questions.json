@@ -1,0 +1,139 @@
+{
+  "route": {
+    "id": "route",
+    "question": "¿Con qué mood vienes hoy?",
+    "options": [
+      { "label": "Comer", "value": "comer" },
+      { "label": "Beber", "value": "beber" },
+      { "label": "Ambos", "value": "ambos" }
+    ]
+  },
+  "dietary": {
+    "id": "dietary",
+    "question": "¿Hay alguna consideración alimentaria?",
+    "options": [
+      { "label": "Vegetariana",         "value": "vegetariana" },
+      { "label": "Veganos",             "value": "vegano" },
+      { "label": "Celiaco",             "value": "celiaco" },
+      { "label": "Sin consideraciones", "value": "ninguna" }
+    ]
+  },
+  "comer": [
+    {
+      "id": "mood",
+      "question": "¿Vas a lo seguro (clásicos) o quieres que te sorprendamos?",
+      "options": [
+        { "label": "Clásico",     "value": "clasico" },
+        { "label": "Sorpréndeme", "value": "sorprendeme" }
+      ]
+    },
+    {
+      "id": "flavor",
+      "question": "¿Qué te pide el cuerpo?",
+      "options": [
+        { "label": "Crujiente y frito",   "value": "frito" },
+        { "label": "Fresco y ligero",     "value": "fresh" },
+        { "label": "Meloso y de cuchara", "value": "meloso" }
+      ]
+    },
+    {
+      "id": "time",
+      "question": "¿Tienes prisa o el tiempo hoy es relativo?",
+      "options": [
+        { "label": "Vengo de paso", "value": "fast" },
+        { "label": "Tengo tiempo",  "value": "slow" }
+      ]
+    },
+    {
+      "id": "discover",
+      "question": "Cuando pruebas algo nuevo, prefieres que sea...",
+      "options": [
+        { "label": "Familiar",    "value": "familiar" },
+        { "label": "Diferente",   "value": "diferent" },
+        { "label": "Potente",     "value": "power" },
+        { "label": "Equilibrado", "value": "balanced" }
+      ]
+    }
+  ],
+  "beber": [
+    {
+      "id": "mood",
+      "question": "¿Vas a lo seguro (clásicos) o quieres que te sorprendamos?",
+      "options": [
+        { "label": "Clásico",     "value": "clasico" },
+        { "label": "Sorpréndeme", "value": "sorprendeme" }
+      ]
+    },
+    {
+      "id": "easy",
+      "question": "¿Un vino fácil de beber o algo más intenso?",
+      "options": [
+        { "label": "Fácil de beber", "value": "drink" },
+        { "label": "Intenso",        "value": "intense" }
+      ]
+    },
+    {
+      "id": "kind",
+      "question": "¿Vino tinto o vino blanco?",
+      "options": [
+        { "label": "Tinto",  "value": "tinto" },
+        { "label": "Blanco", "value": "blanco" }
+      ]
+    },
+    {
+      "id": "sabor",
+      "question": "¿Qué sabor te gusta más?",
+      "options": [
+        { "label": "Dulce",  "value": "sugar" },
+        { "label": "Ácido",  "value": "acid" },
+        { "label": "Amargo", "value": "bitter" }
+      ]
+    }
+  ],
+  "ambos": [
+    {
+      "id": "mood",
+      "question": "¿Vas a lo seguro (clásicos) o quieres que te sorprendamos?",
+      "options": [
+        { "label": "Clásico",     "value": "clasico" },
+        { "label": "Sorpréndeme", "value": "sorprendeme" }
+      ]
+    },
+    {
+      "id": "flavor",
+      "question": "¿Qué te pide el cuerpo?",
+      "options": [
+        { "label": "Crujiente y frito",   "value": "frito" },
+        { "label": "Fresco y ligero",     "value": "fresh" },
+        { "label": "Meloso y de cuchara", "value": "meloso" }
+      ]
+    },
+    {
+      "id": "time",
+      "question": "¿Tienes prisa o el tiempo hoy es relativo?",
+      "options": [
+        { "label": "Vengo de paso", "value": "fast" },
+        { "label": "Tengo tiempo",  "value": "slow" }
+      ]
+    },
+    {
+      "id": "discover",
+      "question": "Cuando pruebas algo nuevo, prefieres que sea...",
+      "options": [
+        { "label": "Familiar",    "value": "familiar" },
+        { "label": "Diferente",   "value": "diferent" },
+        { "label": "Potente",     "value": "power" },
+        { "label": "Equilibrado", "value": "balanced" }
+      ]
+    },
+    {
+      "id": "sabor",
+      "question": "¿Qué sabor te gusta más?",
+      "options": [
+        { "label": "Dulce",  "value": "sugar" },
+        { "label": "Ácido",  "value": "acid" },
+        { "label": "Amargo", "value": "bitter" }
+      ]
+    }
+  ]
+}

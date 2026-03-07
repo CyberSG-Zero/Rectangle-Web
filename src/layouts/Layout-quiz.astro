@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+import Header from '../components/Header';
+import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<Header client:load transition:persist />
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>

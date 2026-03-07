@@ -1,0 +1,190 @@
+{
+  "comer": [
+    {
+      "id": 1,
+      "title": "La Croqueta Lund",
+      "price": "3,5 €",
+      "image": "/img/products/croqueta_lund.png",
+      "tags": ["suave", "clasico", "pequeño", "frito"],
+      "dietary": ["vegetariana", "ninguna"]
+    },
+    {
+      "id": 2,
+      "title": "Bravas Martí",
+      "price": "7 €",
+      "image": "/img/products/bravas_marti.png",
+      "tags": ["intenso", "compartir", "pequeño", "frito"],
+      "dietary": ["vegetariana", "vegano", "celiaco", "ninguna"]
+    },
+    {
+      "id": 3,
+      "title": "Nuestra Gilda Lud",
+      "price": "3,5 €",
+      "image": "/img/products/gilda.png",
+      "tags": ["fresco", "clasico", "pequeño", "fresh"],
+      "dietary": ["vegetariana", "vegano", "celiaco", "ninguna"]
+    },
+    {
+      "id": 4,
+      "title": "La Russa",
+      "price": "7 €",
+      "image": "/img/products/la_russa.png",
+      "tags": ["fresco", "especial", "grande", "fresh"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 5,
+      "title": "Atun, Col, Mojo Rojo",
+      "price": "14 €",
+      "image": "/img/products/atun.png",
+      "tags": ["suave", "compartir", "grande", "meloso"],
+      "dietary": ["vegetariana", "ninguna"]
+    },
+    {
+      "id": 6,
+      "title": "Ratatouille, Demi Vegetal, Salvia",
+      "price": "10 €",
+      "image": "/img/products/ratatouille.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 7,
+      "title": "Berenjena, Miso, Tomate Seco",
+      "price": "12 €",
+      "image": "/img/products/berenjena.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 8,
+      "title": "Higo, Yogurt, Frutos Secos",
+      "price": "10 €",
+      "image": "/img/products/higo.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 9,
+      "title": "Sardina ahumada, Ricotta, Cebollino",
+      "price": "14 €",
+      "image": "/img/products/albondiga.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 10,
+      "title": "Celery, Pate, Cereza",
+      "price": "10 €",
+      "image": "/img/products/celery.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 11,
+      "title": "Maitake, Puerro, limón",
+      "price": "14 €",
+      "image": "/img/products/maitake.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 12,
+      "title": "Caballa, Beurre Blanc, Tirabeque",
+      "price": "14 €",
+      "image": "/img/products/caballa.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 13,
+      "title": "Solomillo, Demi Glace, Yema de Huevo",
+      "price": "14 €",
+      "image": "/img/products/solomillo.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 14,
+      "title": "Calamar, Suquet, Lima",
+      "price": "18 €",
+      "image": "/img/products/calamar.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 15,
+      "title": "Arroz crujiente, Vainilla",
+      "price": "7 €",
+      "image": "/img/products/arroz.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    },
+    {
+      "id": 16,
+      "title": "Mango, Coco, Celery",
+      "price": "7 €",
+      "image": "/img/products/mango.png",
+      "tags": ["intenso", "especial", "grande", "meloso"],
+      "dietary": ["celiaco", "ninguna"]
+    }
+  ],
+  "beber": [
+    {
+      "id": 17,
+      "title": "5455 / Seybel, Aubergne",
+      "price": "40 €",
+      "image": "/img/products/vino_tinto.png",
+      "tags": ["suave", "clasico", "copa", "drink"],
+      "dietary": ["vegetariana", "vegano", "celiaco", "ninguna"]
+    },
+    {
+      "id": 18,
+      "title": "Segunyola / Xarel-lo, Penedès",
+      "price": "29 €",
+      "image": "/img/products/vino_tinto.png",
+      "tags": ["intenso", "aperitivo", "copa", "intense"],
+      "dietary": ["vegetariana", "vegano", "celiaco", "ninguna"]
+    },
+    {
+      "id": 19,
+      "title": "Mas Lasta / Petnat, Larzac",
+      "price": "36 €",
+      "image": "/img/products/vino_tinto.png",
+      "tags": ["fresco", "especial", "copa", "acid"],
+      "dietary": ["vegetariana", "vegano", "celiaco", "ninguna"]
+    },
+    {
+      "id": 20,
+      "title": "Punk Lady / Parellada Rosa, Penedès",
+      "price": "29 €",
+      "image": "/img/products/vino_tinto.png",
+      "tags": ["intenso", "especial", "largo", "bitter"],
+      "dietary": ["vegetariana", "vegano", "celiaco", "ninguna"]
+    },
+    {
+      "id": 21,
+      "title": "Jaumet / Varias, Mallorca",
+      "price": "37 €",
+      "image": "/img/products/vino_tinto.png",
+      "tags": ["fresco", "sin alcohol", "largo", "acid"],
+      "dietary": ["vegetariana", "vegano", "celiaco", "ninguna"]
+    },
+    {
+      "id": 22,
+      "title": "Patxanga / Trepat, Conca del Barberà",
+      "price": "28 €",
+      "image": "/img/products/vino_tinto.png",
+      "tags": ["suave", "clasico", "corto", "drink"],
+      "dietary": ["vegetariana", "vegano", "celiaco", "ninguna"]
+    },
+    {
+      "id": 23,
+      "title": "Arrossa / Garnacha, Navarra",
+      "price": "36 €",
+      "image": "/img/products/vino_tinto.png",
+      "tags": ["suave", "clasico", "corto", "drink"],
+      "dietary": ["vegetariana", "vegano", "celiaco", "ninguna"]
+    }
+  ]
+}

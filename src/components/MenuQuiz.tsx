@@ -276,7 +276,7 @@ function LoadingScreen({ onDone, route }: { onDone: () => void; route: string })
         ))}
       </div>
 
-      <p className="font-Mono font-medium text-6xl text-white tracking-widest uppercase min-h-6 mb-8">
+      <p className="font-Mono font-medium text-3xl md:text-6xl text-white tracking-widest uppercase min-h-6 mb-8">
         {filled > 0 ? messages[msgIdx] : ""}
       </p>
     </div>
@@ -303,7 +303,7 @@ function ProductCard({ product, index }: { product: QuizProduct; index: number }
         />
       </div>
       <div className="flex flex-col gap-2 pb-4 border-b border-wine">
-        <h3 className="font-Mono font-medium uppercase text-[2rem]/[1em]">
+        <h3 className="font-Mono font-medium uppercase text-[1.25rem]/[1em] md:text-[2rem]">
           {product.title}
         </h3>
         <p className="font-DMSans font-normal text-[1.225rem]">{product.price}</p>
@@ -346,7 +346,7 @@ function ResultScreen({ products, onReset }: { products: QuizProduct[]; onReset:
   const next = () => setActiveIdx((i) => Math.min(products.length - 1, i + 1));
 
   return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto pt-[30%]">
       <div className="max-w-280 mx-auto px-4 mb-8">
         <button
           onClick={onReset}
@@ -432,7 +432,7 @@ function ResultScreen({ products, onReset }: { products: QuizProduct[]; onReset:
             bulletActiveClass: "result-bullet-active",
             clickable: true,
           }}
-          style={{ overflow: "visible", padding: "2rem 0 3rem" }}
+          style={{ overflow: "visible", padding: "2rem 0 1rem" }}
         >
           {products.map((p, i) => (
             <SwiperSlide key={p.id}>

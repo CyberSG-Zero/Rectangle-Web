@@ -469,18 +469,18 @@ function ResultScreen({ products, onReset }: { products: QuizProduct[]; onReset:
       {/* Acciones — compartidas */}
       <div className="max-w-280 mx-auto px-4">
         <div className="flex justify-center gap-4 mt-8">
-          <a href="/" className="font-Mono text-xs uppercase tracking-widest text-white border border-white/25 px-8 py-3 no-underline hover:border-white/60 transition-colors duration-200">
+          <a href="/" className="font-Mono text-[1.25rem] uppercase tracking-widest text-white border-2 border-white/25 px-8 py-3 no-underline hover:border-white/60 transition-colors duration-200">
             Reservar
           </a>
-          <button title="Guardar selección" className="w-11 h-11 bg-white/10 border border-white/15 cursor-pointer flex items-center justify-center hover:bg-white/20 transition-colors duration-200">
+          {/* <button title="Guardar selección" className="w-11 h-11 bg-white/10 border border-white/15 cursor-pointer flex items-center justify-center hover:bg-white/20 transition-colors duration-200">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
               <line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
-          </button>
+          </button> */}
         </div>
-        <span className="absolute left-0 font-Antro text-[clamp(3rem,6vw,8.5rem)] text-white text-left mt-8 leading-none">
+        <span className="hidden md:block absolute left-0 font-Antro text-[clamp(3rem,6vw,8.5rem)] text-white text-left mt-8 leading-none">
           Tus tapas ideales...
         </span>
       </div>

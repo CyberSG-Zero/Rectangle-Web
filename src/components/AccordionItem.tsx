@@ -12,7 +12,7 @@ export default function AccordionItem({ name, price, image, alt }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="item border-b-2 border-wine py-4 w-full text-wine transition-all duration-250">
+    <div className="group border-b-2 border-wine py-4 w-full text-wine transition-all duration-250 md:relative">
       <div
         className="flex flex-col items-start justify-between cursor-pointer md:cursor-auto gap-2 md:flex-row"
         onClick={() => setIsOpen(!isOpen)}
@@ -34,10 +34,10 @@ export default function AccordionItem({ name, price, image, alt }: Props) {
         </div>
         <div className={`bg-white border border-wine px-4 py-3 font-bold ${isOpen ? "w-full" : "w-auto"} md:text-xl`}>
           {price}
-          <div className={`item-img overflow-hidden transition-all duration-250 pb-0 w-0 ${isOpen ? "max-h-150 w-full pb-8" : "max-h-0"}`}>
-            <div className="border border-wine mt-4">
-              <img className="transition-all duration-250 w-full h-full object-cover aspect-3/4" src={image} alt={alt ?? name} />
-            </div>
+          <div className={`md:group-hover:w-auto group-hover:max-w-62.5 md:group-hover:max-h-80 overflow-hidden transition-all md:group-hover:pb-8 duration-250 pb-0 w-0 ${isOpen ? "max-h-150 w-full pb-4" : "max-h-0"}`}>
+              <img className="border border-wine mt-4 transition-all duration-250 w-full h-full object-cover aspect-3/4" src={image} alt={alt ?? name} />
+            {/* <div className="border border-wine mt-4 transition-all duration-250">
+            </div> */}
           </div>
         </div>
       </div>

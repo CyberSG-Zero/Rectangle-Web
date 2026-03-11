@@ -172,15 +172,12 @@ body, html {
     animation-delay: calc(30s / 8 * (8 - 9) * -9);
 } */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .item{
     width: 100%;
   }
   
   .item .item-img {
-    /* width: auto;
-    height: 100%;
-    max-height: 150px;  */
     transition: all 0.3s ease-in-out;
     max-height: 0;
   }
@@ -195,4 +192,21 @@ body, html {
     }
   }
 
+} */
+
+@media (min-width: 768px) {
+  .item-img {
+    transition: max-height 0.3s ease-in-out, max-width 0.3s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  .item-img img {
+    transition: opacity 0.2s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  .item:hover .item-img,
+  .item:hover .item-img img {
+    transition-delay: 0s;
+  }
 }

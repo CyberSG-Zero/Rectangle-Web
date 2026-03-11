@@ -346,7 +346,7 @@ function ResultScreen({ products, onReset }: { products: QuizProduct[]; onReset:
   const next = () => setActiveIdx((i) => Math.min(products.length - 1, i + 1));
 
   return (
-    <div className="w-full mx-auto pt-[30%]">
+    <div className="w-full mx-auto pt-[30%] md:pt-0">
       <div className="max-w-280 mx-auto px-4 mb-8">
         <button
           onClick={onReset}

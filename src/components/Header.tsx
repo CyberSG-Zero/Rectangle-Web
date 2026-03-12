@@ -110,7 +110,7 @@ export default function Header() {
 
           {/* Mobile: idioma + hamburguesa */}
           <div className="flex md:hidden items-stretch font-Mono">
-            <div className={`flex items-center px-4 text-sm font-bold ${textColor} border-l-2 ${borderColor}`}>
+            <div className={`flex items-center px-4 text-sm font-bold ${textColor} ${borderColor}`}>
               {lang}
             </div>
             <button

@@ -40,7 +40,7 @@ export default function Header() {
         <div className="flex items-stretch">
 
           {/* Logo */}
-          <a href="/" className={`flex items-center px-5 py-4 border-r-2 ${borderColor} shrink-0`}>
+          <a href="/" aria-label="Ir a la página de inicio" className={`flex items-center px-5 py-4 border-r-2 ${borderColor} shrink-0`}>
             <img
               src={scrolled ? "/img/dark-logo.avif" : "/img/white-logo.avif"}
               alt="Rectangle"

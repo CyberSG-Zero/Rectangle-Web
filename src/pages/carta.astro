@@ -1,9 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AccordionItem from "../components/AccordionItem.tsx";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="El Rectangle - Carta" description="Restaurante de cocina mediterránea con un estilo inquieto, cambiante y arriesgado. Nuestra propuesta se basa en ingredientes de temporada y una selección de vinos artesanales. La experiencia en la barra te permite entender el restaurante desde dentro, mientras que nuestra carta ofrece platos sin normas ni recetas sagradas. Déjate llevar por nuestras sugerencias y disfruta de una experiencia culinaria única.">
@@ -29,7 +26,7 @@ import AccordionItem from "../components/AccordionItem.tsx";
 			</div>
 
 			<!-- <div class="absolute inset-0 z-10 bg-center bg-cover bg-[url('img/bg-home/BG_Hero.png')]"/> -->
-			<img class="absolute inset-0 z-10 bg-center object-cover h-full w-full" src="/img/bg-home/BG_Hero.avif" alt="#">
+			<img class="absolute inset-0 z-10 bg-center object-cover h-full w-full" loading="lazy" src="/img/bg-home/BG_Hero.avif" alt="#">
 
 			<!-- Overlay oscuro -->
 			<div class="absolute inset-0 z-10 bg-black/50" />
@@ -259,8 +256,8 @@ import AccordionItem from "../components/AccordionItem.tsx";
 				</div>
 
 				<div class="w-full relative">
-					<img class="relative z-20 w-full" src="/img/products/Vino1.avif" alt="imagen de vinos">
-					<img class="absolute -top-10 md:-top-30 right-0 z-10 max-w-70 md:max-w-105" src="/img/products/Vino2.avif" alt="imagen de vinos">
+					<img class="relative z-20 w-full" src="/img/products/Vino1.avif" loading="lazy" alt="imagen de vinos">
+					<img class="absolute -top-10 md:-top-30 right-0 z-10 max-w-70 md:max-w-105" src="/img/products/Vino2.avif" loading="lazy" alt="imagen de vinos">
 				</div>
 			</div>
 		</div>

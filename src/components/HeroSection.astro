@@ -10,9 +10,12 @@ const images = [
 ];
 
 const n = images.length;
-const dur = n * 2; // duración total en segundos (2s por foto)
-
+const dur = n * 2;
 ---
+
+<!-- 1. Preload SOLO la primera imagen (la que causa el LCP) -->
+<link rel="preload" as="image" href={images[0]} fetchpriority="high" slot="head" />
+
 <style set:html={`
   @keyframes hero-show {
     0%, ${((1 / n) * 100).toFixed(2)}%  { opacity: 1; }
@@ -32,15 +35,12 @@ const dur = n * 2; // duración total en segundos (2s por foto)
   `).join('')}
 `}></style>
 
-
 <section class="relative w-full flex justify-center h-[80dvh] min-h-96 items-center">
-
-  <!-- container -->
   <div class="max-w-360 flex w-full h-full justify-center items-center px-[0.875rem] py-[5rem]">
     <div class="z-20 flex flex-col items-center justify-center gap-[4rem]">
-      <img src="img/white-logo.avif" alt="Logo del Rectangle">
+      <img src="img/white-logo.avif" alt="Logo del Rectangle" width="200" height="80">
 
-      <div class=" flex gap-4 items-center relative flex-wrap justify-center font-Mono font-normal">
+      <div class="flex gap-4 items-center relative flex-wrap justify-center font-Mono font-normal">
         <a href="/reserva" class="bg-orange text-white-cream items-center justify-center px-[2rem] py-[1rem] max-w-[250px] hover:bg-orange-800 transition-colors duration-250">
           HAZ TU RESERVA
         </a>
@@ -50,17 +50,24 @@ const dur = n * 2; // duración total en segundos (2s por foto)
       </div>
     </div>
 
-      <!-- Fondos apilados -->
-    {images.map((src, i) => (
+    <!-- 2. Primera imagen como <img> real para que el navegador la detecte como LCP -->
+    <img
+      src={images[0]}
+      alt=""
+      aria-hidden="true"
+      fetchpriority="high"
+      decoding="sync"
+      class="slide-0 absolute inset-0 z-10 w-full h-full object-cover object-center"
+    />
+
+    <!-- 3. El resto siguen siendo divs con background-image, pero con loading diferido -->
+    {images.slice(1).map((src, i) => (
       <div
-        class={`slide-${i} absolute inset-0 z-10 bg-center bg-cover opacity-0`}
+        class={`slide-${i + 1} absolute inset-0 z-10 bg-center bg-cover opacity-0`}
         style={`background-image: url(${src})`}
       />
     ))}
 
-    <!-- Overlay oscuro -->
     <div class="absolute inset-0 z-10 bg-black/50" />
-
-
   </div>
 </section>
